@@ -35,9 +35,6 @@ public class HeartbeatView extends View {
         redBitmap = BitmapFactory.decodeResource(context.getResources(), R.drawable.red_icon);
     }
 
-    /**
-     * {@inheritDoc}
-     */
     @Override
     protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
         super.onMeasure(widthMeasureSpec, heightMeasureSpec);
@@ -47,9 +44,6 @@ public class HeartbeatView extends View {
         setMeasuredDimension(parentWidth, parentHeight);
     }
 
-    /**
-     * {@inheritDoc}
-     */
     @Override
     protected void onDraw(Canvas canvas) {
         if (canvas == null) throw new NullPointerException();
