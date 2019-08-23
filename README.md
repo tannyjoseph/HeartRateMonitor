@@ -9,4 +9,4 @@ Measure your heartbeat
 
 3. java: 3 files
 
-4 values : strings.xml
+4. values : strings.xml
