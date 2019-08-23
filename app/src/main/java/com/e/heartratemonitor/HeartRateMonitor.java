@@ -167,9 +167,6 @@ public class HeartRateMonitor extends Activity {
                     return;
                 }
 
-                // Log.d(TAG,
-                // "totalTimeInSecs="+totalTimeInSecs+" beats="+beats);
-
                 if (beatsIndex == beatsArraySize) beatsIndex = 0;
                 beatsArray[beatsIndex] = dpm;
                 beatsIndex++;
@@ -182,7 +179,7 @@ public class HeartRateMonitor extends Activity {
                         beatsArrayCnt++;
                     }
                 }
-                int beatsAvg = (beatsArrayAvg / beatsArrayCnt);
+                int beatsAvg = (beatsArrayAvg / beatsArrayCnt) - 15;
                 text.setText(String.valueOf(beatsAvg));
                 startTime = System.currentTimeMillis();
                 beats = 0;
@@ -193,9 +190,6 @@ public class HeartRateMonitor extends Activity {
 
     private static SurfaceHolder.Callback surfaceCallback = new SurfaceHolder.Callback() {
 
-        /**
-         * {@inheritDoc}
-         */
         @Override
         public void surfaceCreated(SurfaceHolder holder) {
             try {
